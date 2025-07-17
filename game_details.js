@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const root = document.getElementById('root');
 
@@ -64,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createNavBar() {
         return createElement('div', { className: 'nav-bar' }, [
-            createElement('button', { className: 'logo' }, [
+            createElement('button', { className: 'logo', onclick: () => window.location.href = 'index.html' }, [
                 createElement('div', { className: 'logo-image', style: { backgroundImage: `url('${imgLogo}')` } })
             ]),
             createElement('div', { className: 'top-menu' }, [
-                createElement('button', { className: 'top-menu-tab active' }, ['STORE']),
+                createElement('button', { className: 'top-menu-tab', onclick: () => window.location.href = 'index.html' }, ['STORE']),
                 createElement('div', { className: 'top-menu-tab' }, ['LIBRARY']),
                 createElement('div', { className: 'top-menu-tab' }, ['COMMUNITY']),
                 createElement('div', { className: 'top-menu-tab' }, ['CHAT']),
@@ -97,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     createImage(imgFrame164, 'Search', 'search-icon'),
                     createElement('span', { className: 'search-text' }, ['Search'])
                 ]),
-                createElement('button', { className: 'side-tab' }, ['Wishlist']),
+                createElement('button', { className: 'side-tab', onclick: () => window.location.href = 'wishlist.html' }, ['Wishlist']),
                 createElement('button', { className: 'side-tab' }, ['My Cart']),
-                createElement('button', { className: 'side-tab' }, ['Your Store']),
+                createElement('button', { className: 'side-tab', onclick: () => window.location.href = 'index.html' }, ['Your Store']),
                 createElement('button', { className: 'side-tab' }, ['New & Noteworthy']),
                 createElement('button', { className: 'side-tab' }, ['Special Offers']),
-                createElement('button', { className: 'side-tab' }, ['Popular']),
+                createElement('button', { className: 'side-tab', onclick: () => window.location.href = 'popular.html' }, ['Popular']),
                 createElement('button', { className: 'side-tab' }, ['Free To Play']),
                 createElement('button', { className: 'side-tab' }, ['Categories']),
                 createElement('button', { className: 'side-tab' }, ['Genres']),

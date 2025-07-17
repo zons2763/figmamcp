@@ -93,12 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     createImage(imgFrame164, 'Search', 'search-icon'),
                     createElement('span', { className: 'search-text' }, ['Search'])
                 ]),
-                createElement('button', { className: 'side-tab' }, ['Wishlist']),
+                createElement('button', { className: 'side-tab', onclick: () => window.location.href = 'wishlist.html' }, ['Wishlist']),
                 createElement('button', { className: 'side-tab' }, ['My Cart']),
                 createElement('button', { className: 'side-tab' }, ['Your Store']),
                 createElement('button', { className: 'side-tab' }, ['New & Noteworthy']),
                 createElement('button', { className: 'side-tab' }, ['Special Offers']),
-                createElement('button', { className: 'side-tab' }, ['Popular']),
+                createElement('button', { className: 'side-tab', onclick: () => window.location.href = 'popular.html' }, ['Popular']),
                 createElement('button', { className: 'side-tab' }, ['Free To Play']),
                 createElement('button', { className: 'side-tab' }, ['Categories']),
                 createElement('button', { className: 'side-tab' }, ['Genres']),
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
             createElement('div', { className: 'featured-content' }, [
                 createElement('div', { className: 'featured-title' }, ['Featured & Recommended']),
                 createElement('div', { className: 'featured-display' }, [
-                    createElement('div', { className: 'featured-image-main', style: { backgroundImage: `url('${imgFrame}')` } }),
+                    createElement('div', { className: 'featured-image-main', style: { backgroundImage: `url('${imgFrame}')` }, onclick: () => window.location.href = 'game_details.html' }),
                     createElement('div', { className: 'featured-info' }, [
                         createElement('div', { className: 'thumbnail-grid' }, [
                             createElement('div', { className: 'thumbnail', style: { backgroundImage: `url('${imgFrame103}')` } }),
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             createElement('div', { className: 'thumbnail', style: { backgroundImage: `url('${imgFrame105}')` } }),
                             createElement('div', { className: 'thumbnail', style: { backgroundImage: `url('${imgFrame106}')` } })
                         ]),
-                        createElement('div', { className: 'game-title' }, ['Game Name']),
+                        createElement('div', { className: 'game-title', onclick: () => window.location.href = 'game_details.html' }, ['Game Name']),
                         createElement('div', { className: 'game-info' }, [
                             createElement('div', { className: 'tags-and-wishlist' }, [
                                 createElement('div', { className: 'tags' }, [
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createGameCard(image) {
         return createElement('div', { className: 'game-card' }, [
-            createElement('div', { className: 'game-card-image', style: { backgroundImage: `url('${image}')` } }),
+            createElement('div', { className: 'game-card-image', style: { backgroundImage: `url('${image}')` }, onclick: () => window.location.href = 'game_details.html' }),
             createElement('div', { className: 'game-card-bar' }, [
                 createElement('div', { className: 'price' }, ['$ 00.00']),
                 createElement('button', { className: 'wishlist-button' }, [createImage(imgDefault, 'Wishlist', 'wishlist-icon')])
