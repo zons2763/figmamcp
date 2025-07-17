@@ -1,3 +1,4 @@
+
 :root {
     --background: #222636;
     --secondary-text: #FFFFFF;
@@ -9,680 +10,402 @@
     --fill-0: white;
 }
 
-body {
+body, html {
     background-color: var(--background);
     color: var(--primary-text);
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 #root {
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .store-container {
-    background-color: #222636;
-    position: relative;
     width: 100%;
     height: 100%;
-}
-
-.page-container {
-    position: absolute;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: 918px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    left: 0;
-    overflow: clip;
-    padding: 0 60px;
-    right: 0;
-    transform: translateY(-50%);
-    top: calc(50% + 32px);
-}
-
-.main-content {
-    flex-basis: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 1px;
-    min-width: 1px;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.main-content-inner {
-    flex-basis: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 1px;
-    min-width: 1px;
-    padding: 60px 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.banner {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    overflow: clip;
-    padding: 44px 114px;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-}
-
-.banner-text {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    color: #222636;
-    font-size: 48px;
-    text-align: center;
-    white-space: nowrap;
-    letter-spacing: 33.6px;
-}
-
-.featured-section {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.nav-arrow {
-    height: 128px;
-    position: relative;
-    flex-shrink: 0;
-    width: 32px;
-}
-
-.featured-content {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 940px;
-}
-
-.featured-title {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    min-width: 100%;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-    text-align: left;
-    width: -moz-min-content;
-    width: min-content;
-}
-
-.featured-display {
-    aspect-ratio: 940/353;
-    background-color: #171a21;
-    overflow: clip;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.featured-display-inner {
-    position: absolute;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    left: 0;
-    padding: 0 12px;
-    top: 0;
-    width: 940px;
-}
-
-.featured-image-main {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 330px;
-    border-radius: 10px;
-    flex-shrink: 0;
-    width: 576px;
-}
-
-.featured-info {
-    background-color: #171a21;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: 353px;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 30px 8px 10px;
-    position: relative;
-    flex-shrink: 0;
-    width: 324px;
-}
-
-.thumbnail-grid {
-    box-sizing: border-box;
-    gap: 2px;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0px, 1fr));
-    grid-template-rows: repeat(2, minmax(0px, 1fr));
-    height: 176px;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.thumbnail {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 87px;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 153px;
-}
-
-.game-title {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    color: #ffffff;
-    font-size: 24px;
-    text-align: left;
-    width: 100%;
-}
-
-.game-info {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.tags-and-wishlist {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.tags {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.tag {
-    background-color: rgba(255,255,255,0.3);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 2px 10px;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-    color: #ffffff;
-    font-size: 11px;
-}
-
-.wishlist-button {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 1px 0;
-    position: relative;
-    width: 18px;
-    height: 100%;
-    border: none;
-    background: none;
-}
-
-.price-and-platform {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
-}
-
-.price {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    color: #ffffff;
-    font-size: 14px;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.platform-icons {
-    position: relative;
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
-}
-
-.slideshow-controls {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    gap: 7px;
-    align-items: center;
-    justify-content: center;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.slideshow-button {
-    background-color: rgba(255,255,255,0.5);
-    display: block;
-    position: relative;
-    border-radius: 999px;
-    flex-shrink: 0;
-    width: 14px;
-    height: 14px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-.slideshow-button.active {
-    background-color: #3a82ff;
-}
-
-.game-cards-section {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-}
-
-.game-cards-container {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 6px;
-    align-items: flex-start;
-    justify-content: center;
-    overflow: clip;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 940px;
-}
-
-.game-card {
-    height: 154px;
-    overflow: clip;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 220px;
-}
-
-.game-card-bar {
-    position: absolute;
-    background-color: #171a21;
-    bottom: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    left: 0;
-    padding: 0 10px;
-    right: 0;
-    top: 81.169%;
-}
-
-.game-card-image {
-    position: absolute;
-    aspect-ratio: 220/125;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    bottom: 18.831%;
-    top: 0;
-    transform: translateX(-50%);
-    left: calc(50% - 0.0241699px);
-}
-
-.side-panel {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: clip;
-    padding: 124px 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.side-panel-inner {
-    background-color: #222636;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-    border-radius: 5px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
-    width: 160px;
-}
-
-.search-bar {
-    cursor: pointer;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 160px;
-    border: 1px solid rgba(255,255,255,0.7);
-    background: none;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.search-icon {
-    position: relative;
-    flex-shrink: 0;
-    width: 14px;
-    height: 14px;
-}
-
-.search-text {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    text-align: left;
-    white-space: nowrap;
-}
-
-.side-tab {
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    overflow: visible;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 5px;
-    flex-shrink: 0;
-    width: 160px;
-    background: none;
-    border: none;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-    text-align: left;
 }
 
 .nav-bar {
-    background-color: #171a21;
+    background-color: var(--box);
     box-sizing: border-box;
     display: flex;
     height: 64px;
     align-items: center;
     justify-content: space-between;
     padding: 0 60px;
+    width: 100%;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.side-panel {
+    width: 280px;
+    padding: 60px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+.page-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 60px;
+}
+
+.main-content {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.banner {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-text {
+    font-size: 48px;
+    font-weight: 300;
+    color: #222636;
+    letter-spacing: 33.6px;
+}
+
+.featured-section, .game-cards-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.nav-arrow {
+    cursor: pointer;
+    width: 32px;
+    height: 128px;
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-arrow {
+    left: -40px;
+}
+
+.next-arrow {
+    right: -40px;
+}
+
+.featured-content {
+    width: 940px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.featured-title {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    width: 100%;
+    text-align: left;
+}
+
+.featured-display {
+    background-color: var(--box);
+    border-radius: 5px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.featured-image-main {
+    width: 576px;
+    height: 330px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.featured-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.thumbnail {
+    height: 87px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tags-and-wishlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 11px;
+}
+
+.wishlist-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.wishlist-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.price-and-platform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 14px;
+}
+
+.platform-icons {
+    width: 18px;
+    height: 18px;
+}
+
+.platform-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-controls {
+    display: flex;
+    gap: 7px;
+}
+
+.slideshow-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    border: none;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.slideshow-button.active {
+    background-color: var(--brand);
+}
+
+.game-cards-container {
+    display: flex;
+    gap: 15px;
+    width: 940px;
+}
+
+.game-card {
+    width: 220px;
+    height: 154px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.game-card-image {
+    width: 100%;
+    height: 125px;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-card-bar {
+    background-color: var(--box);
+    position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.side-menu-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-bar {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.7);
+    background: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.search-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+}
+
+.side-tab {
+    width: 100%;
+    border-radius: 5px;
+    padding: 6px 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
 }
 
 .logo {
-    height: 40px;
-    position: relative;
-    flex-shrink: 0;
     width: 160px;
+    height: 40px;
 }
 
 .logo-image {
-    background-size: 124.31% 100%;
-    position: absolute;
-    aspect-ratio: 140/40;
-    background-position: 64.69% 0%;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
-    bottom: 0;
-    left: 0;
-    top: 0;
+    background-position: center;
 }
 
 .top-menu {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     gap: 50px;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
 }
 
 .top-menu-tab {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 700;
     font-size: 16px;
+    font-weight: bold;
     text-transform: uppercase;
-    color: #ffffff;
     cursor: pointer;
 }
 
 .top-menu-tab.active {
-    color: #3a82ff;
+    color: var(--brand);
     text-decoration: underline;
 }
 
 .user-section {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
+    align-items: center;
+    gap: 15px;
 }
 
 .notification-bell {
-    height: 16px;
-    position: relative;
-    flex-shrink: 0;
     width: 15px;
+    height: 17px;
+    cursor: pointer;
 }
 
 .user-info {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     gap: 6px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
 }
 
 .user-details {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0;
-    position: relative;
-    align-self: stretch;
-    flex-shrink: 0;
+    text-align: right;
 }
 
 .username-dropdown {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     gap: 2px;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 0;
-    position: relative;
-    flex-shrink: 0;
-    width: 100%;
+    cursor: pointer;
 }
 
 .username {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
-    color: #ffffff;
     font-size: 14px;
-    white-space: nowrap;
-    text-align: right;
+    font-weight: 500;
 }
 
 .dropdown-arrow {
-    height: 16px;
-    position: relative;
-    flex-shrink: 0;
     width: 12px;
+    height: 16px;
 }
 
 .balance {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    font-style: normal;
-    position: relative;
-    flex-shrink: 0;
     font-size: 12px;
     color: rgba(255,255,255,0.7);
-    text-align: right;
-    width: 100%;
 }
 
 .avatar {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
 }
