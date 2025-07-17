@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const root = document.getElementById('root');
 
@@ -13,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const img1 = "http://localhost:3845/assets/f3c68c69e1adae25e92a7c1f8f8fb3f9836c110d.png";
     const img2 = "http://localhost:3845/assets/86394d3fd11774f9a35c6310cc5ad4b72e43a347.png";
     const img3 = "http://localhost:3845/assets/68d126758967cfcc1ff7a12605c88ca8e45d9455.png";
-    const imgDefault = "http://localhost:3845/assets/900c91caf07bffd5410da965bfec99b8ea004a7b.svg";
-    const imgVector = "http://localhost:3845/assets/69b464cf562b8f812b6bb7f85461f8c691a59c06.svg";
-    const imgGravityUiBell = "http://localhost:3845/assets/96680d7ae1394c5233cb990961ef7e488db0fab8.svg";
+    const imgDefault = "http://localhost:3845/assets/2e55f836910465d92000de6f8f2e72477cf56bac.svg";
+    const imgFrame164 = "http://localhost:3845/assets/0c4e81f528c8f6e7bf4ce60fc6c3480a4269b74c.svg";
+    const imgGravityUiBell = "http://localhost:3845/assets/ebe1f1c7f4094c69a71655827c9108c31e57ad8e.svg";
     const imgGravityUiCaretDown = "http://localhost:3845/assets/9ed21041c4d320fdc4adfe1a05c1346c4d709b1e.svg";
     const imgPrev = "http://localhost:3845/assets/e189b2b002c7c6d45c419f652619be846dd3b326.svg";
     const imgFrame102 = "http://localhost:3845/assets/21e44fd1b11e7a42e9ac069a54510135a6338644.svg";
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function SearchBar() {
         return createElement('button', { className: 'search-bar' }, [
-            createElement('div', { className: 'search-icon' }, [createImage(imgVector)]),
+            createElement('div', { className: 'search-icon' }, [createImage(imgFrame164)]),
             createElement('div', { className: 'search-text' }, ['Search'])
         ]);
     }
