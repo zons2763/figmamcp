@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const img5 = "http://localhost:3845/assets/d448defe99a3d4db9fb4e5bfb2f42d235fffef4b.png";
     const imgLogo = "http://localhost:3845/assets/017889acd85efe87097ed475b5d46ee026236758.png";
     const imgFrame163 = "http://localhost:3845/assets/14672eb2ffd08e710220a0dbb4bae284b390070b.svg";
-    const imgGravityUiShoppingCart = "http://localhost:3845/assets/3ec343bb11c4949db0c4af14e3548f2ad4df920b2.svg";
+    const imgGravityUiShoppingCart = "http://localhost:3845/assets/3ec343bb11c494db0c4af14e3548f2ad4df920b2.svg";
     const imgFrame164 = "http://localhost:3845/assets/0c4e81f528c8f6e7bf4ce60fc6c3480a4269b74c.svg";
     const imgFilter = "http://localhost:3845/assets/8bb0ae42ff54d0a7f1c1e06a30f3e292c3d6cec5.svg";
     const img1 = "http://localhost:3845/assets/869f418e8615bd2f37474e6ac8b56595db0b2770.svg";
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 createElement('div', { className: 'game-card-image', style: { backgroundImage: `url('${imageSrc}')` } })
             ]),
             createElement('div', { className: 'game-card-details' }, [
-                createElement('button', { className: 'game-info-left' }, [
-                    createElement('div', { className: 'game-card-title', onclick: () => window.location.href = 'game_details.html' }, [gameName]),
+                createElement('div', { className: 'game-info-left' }, [
+                    createElement('button', { className: 'game-card-title', onclick: () => window.location.href = 'game_details.html' }, [gameName]),
                     createElement('div', { className: 'game-card-rating-section' }, [
                         createElement('span', { className: 'game-card-rating' }, [rating]),
                         createElement('span', { className: 'game-card-rating-count' }, [ratingCount])

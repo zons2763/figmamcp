@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]),
             createElement('div', { className: 'game-card-details' }, [
                 createElement('div', { className: 'game-card-title-wrapper' }, [
-                    createElement('button', { className: 'game-card-title', onclick: () => window.location.href = 'game_details.html' }, [gameName])
+                    createElement('div', { className: 'game-card-title', onclick: () => window.location.href = 'game_details.html' }, [gameName])
                 ]),
                 createElement('div', { className: 'game-stats' }, [
                     createElement('div', { className: 'game-price' }, [price]),

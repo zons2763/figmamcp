@@ -242,13 +242,18 @@ body, html {
 }
 
 .charts-columns-header > div {
-    flex-grow: 1;
     text-align: center;
 }
 
 .charts-columns-header > div:first-child {
     text-align: left;
-    flex-grow: 2;
+}
+
+.game-card-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Removed height: 100%; */
 }
 
 .popular-game-cards-container {

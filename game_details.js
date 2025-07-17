@@ -118,9 +118,16 @@ document.addEventListener('DOMContentLoaded', function () {
         return createElement('div', { className: 'page-container' }, [
             createElement('div', { className: 'main-content' }, [
                 createGameTitleSection(),
-                createGameDetailsMain(),
+                createGameInfoLayout(),
                 createAboutGameSection()
             ])
+        ]);
+    }
+
+    function createGameInfoLayout() {
+        return createElement('div', { className: 'game-info-layout' }, [
+            createGameDetailsMain(),
+            createGameDetailsSidebar()
         ]);
     }
 
@@ -199,34 +206,37 @@ document.addEventListener('DOMContentLoaded', function () {
                 createElement('div', { className: 'about-game-text' }, [
                     'Lorem ipsum dolor sit amet consectetur. Ullamcorper massa venenatis cursus sed est interdum cras amet. Ultrices massa quam nam ac erat nulla. Scelerisque sed sagittis adipiscing a pellentesque pharetra. Sed cras enim donec turpis gravida faucibus etiam.'
                 ])
-            ]),
-            createElement('div', { className: 'game-details-sidebar' }, [
-                createElement('div', { className: 'sidebar-section-title' }, ['Game rating']),
-                createElement('div', { className: 'rating-awards-section' }, [
-                    createElement('div', { className: 'rating-section' }, [
-                        createElement('div', { className: 'rating-image', style: { backgroundImage: `url('${imgImage1}')` } }),
-                        createElement('div', { className: 'rating-reason' }, ['Reason 1']),
-                        createElement('div', { className: 'rating-reason' }, ['Reason 2']),
-                        createElement('div', { className: 'rating-reason' }, ['Reason 3'])
-                    ]),
-                    createElement('div', { className: 'awards-section' }, [
-                        createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } }),
-                        createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } }),
-                        createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } })
-                    ])
+            ])
+        ]);
+    }
+
+    function createGameDetailsSidebar() {
+        return createElement('div', { className: 'game-details-sidebar' }, [
+            createElement('div', { className: 'sidebar-section-title' }, ['Game rating']),
+            createElement('div', { className: 'rating-awards-section' }, [
+                createElement('div', { className: 'rating-section' }, [
+                    createElement('div', { className: 'rating-image', style: { backgroundImage: `url('${imgImage1}')` } }),
+                    createElement('div', { className: 'rating-reason' }, ['Reason 1']),
+                    createElement('div', { className: 'rating-reason' }, ['Reason 2']),
+                    createElement('div', { className: 'rating-reason' }, ['Reason 3'])
                 ]),
-                createElement('div', { className: 'sidebar-section-title' }, ['Achievements']),
-                createElement('div', { className: 'achievements-section' }, [
-                    createElement('div', { className: 'achievements-row' }, [
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage3}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage4}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage5}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage6}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage7}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage8}')` } }),
-                        createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage9}')` } }),
-                        createElement('div', { className: 'achievement-count' }, ['+'])
-                    ])
+                createElement('div', { className: 'awards-section' }, [
+                    createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } }),
+                    createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } }),
+                    createElement('div', { className: 'award-image', style: { backgroundImage: `url('${imgImage2}')` } })
+                ])
+            ]),
+            createElement('div', { className: 'sidebar-section-title' }, ['Achievements']),
+            createElement('div', { className: 'achievements-section' }, [
+                createElement('div', { className: 'achievements-row' }, [
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage3}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage4}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage5}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage6}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage7}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage8}')` } }),
+                    createElement('div', { className: 'achievement-image', style: { backgroundImage: `url('${imgImage9}')` } }),
+                    createElement('div', { className: 'achievement-count' }, ['+'])
                 ])
             ])
         ]);
